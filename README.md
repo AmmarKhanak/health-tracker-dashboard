@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 
 3. Add `.env` file:
-MONGO_URI=mongodb+srv://username:password@cluster0.mongodb.net/?retryWrites=true&w=majority
+MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/?retryWrites=true&w=majority
 
 4. Run the app:
 

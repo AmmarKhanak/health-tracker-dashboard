@@ -1,0 +1,29 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Health Tracker Dashboard</title>
+</head>
+<body>
+    <h1>Health Tracker Dashboard</h1>
+
+    <!-- Form to add new entry -->
+    <form method="POST">
+        <input name="date" type="date" required />
+        <input name="water" type="number" placeholder="Water (ml)" required />
+        <input name="calories" type="number" placeholder="Calories" required />
+        <input name="sleep" type="number" step="0.1" placeholder="Sleep (hrs)" required />
+        <input name="exercise" type="text" placeholder="Exercise" required />
+        <button type="submit">Add Entry</button>
+    </form>
+
+    <!-- Display all entries -->
+    <h2>Logged Entries</h2>
+    <ul>
+        {% for entry in data %}
+        <li>{{ entry['date'] }} - Water: {{ entry['water'] }}ml, Sleep: {{ entry['sleep'] }}h, Calories: {{ entry['calories'] }}kcal, Exercise: {{ entry['exercise'] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
